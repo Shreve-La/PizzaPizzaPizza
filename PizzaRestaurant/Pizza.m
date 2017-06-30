@@ -10,11 +10,6 @@
 
 @implementation Pizza
 
-//typedef NS_ENUM(NSInteger, PizzaSize){
-//    Small,
-//    Medium,
-//    Large
-//};
 
 
 - (instancetype)initWithSize:(PizzaSize)size andToppings:(NSArray*)toppings
@@ -27,5 +22,8 @@
     }
     return self;
 }
+
+
+
 
 @end

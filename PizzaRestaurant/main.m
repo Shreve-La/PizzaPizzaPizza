@@ -10,6 +10,8 @@
 
 #import "Kitchen.h"
 #import "Pizza.h"
+#import "MeanManager.h"
+#import "NiceManager.h"
 
 
 
@@ -24,6 +26,8 @@ int main(int argc, const char * argv[])
         NSLog(@"Please pick your pizza size and toppings:");
         
         Kitchen *restaurantKitchen = [Kitchen new];
+        MeanManager *meanManager = [MeanManager new];
+        NiceManager *niceManager = [NiceManager new];
         PizzaSize pizzaSize;
         
         while (TRUE) {
@@ -62,10 +66,18 @@ int main(int argc, const char * argv[])
                 continue;
             }
             
+            //set delegate to mean manager
+            restaurantKitchen.delegate = meanManager;
+            
             // Send order to Kitchen instance
             [restaurantKitchen makePizzaWithSize:pizzaSize toppings:toppings];
 
+            //set delegate to mean manager
+            restaurantKitchen.delegate = niceManager;
             
+            // Send order to Kitchen instance
+            [restaurantKitchen makePizzaWithSize:pizzaSize toppings:toppings];
+
             
             }
 

@@ -7,14 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+//#import "Kitchen.h"
 
-@interface Pizza : NSObject
-
-typedef NS_ENUM(NSInteger, PizzaSize){  
+typedef NS_ENUM(NSInteger, PizzaSize){
     Small,
     Medium,
     Large
 };
+
+@interface Pizza : NSObject
 
 @property  PizzaSize size;
 @property (strong, nonatomic) NSArray <NSString*> *toppings;
