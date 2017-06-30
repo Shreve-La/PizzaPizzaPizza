@@ -8,8 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "Kitchen.h"
+#import "DeliveryService.h"
 
 @interface NiceManager : NSObject <KitchenDelegate>
+
+@property (strong, nonatomic) DeliveryService *deliveryService;
 
 
 @end

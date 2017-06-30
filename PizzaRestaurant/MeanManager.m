@@ -28,6 +28,7 @@
 
 -(void)kitchenDidMakePizza:(Pizza *)pizza{
     NSLog(@"Kitchen Did Make a Pizza with %@", pizza.toppings);
+    [self.deliveryService deliverPizza:pizza];
 }
 
 

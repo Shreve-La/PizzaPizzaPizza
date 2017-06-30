@@ -28,6 +28,12 @@ int main(int argc, const char * argv[])
         Kitchen *restaurantKitchen = [Kitchen new];
         MeanManager *meanManager = [MeanManager new];
         NiceManager *niceManager = [NiceManager new];
+        DeliveryService *deliveryService = [DeliveryService new];
+        DeliveryCar *deliveryCar = [DeliveryCar new];
+        meanManager.deliveryService = deliveryService;
+        niceManager.deliveryService = deliveryService;
+        deliveryService.deliveryCar = deliveryCar;
+        
         PizzaSize pizzaSize;
         
         while (TRUE) {
@@ -77,6 +83,8 @@ int main(int argc, const char * argv[])
             
             // Send order to Kitchen instance
             [restaurantKitchen makePizzaWithSize:pizzaSize toppings:toppings];
+            
+            [deliveryService listPizzas]
 
             
             }
