@@ -10,7 +10,7 @@
 
 @interface Pizza : NSObject
 
-typedef NS_ENUM(NSInteger, PizzaSize){
+typedef NS_ENUM(NSInteger, PizzaSize){  
     Small,
     Medium,
     Large
